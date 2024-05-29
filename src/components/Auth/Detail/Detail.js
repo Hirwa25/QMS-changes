@@ -20,7 +20,7 @@ const Details = () => {
     const [role, setRole] = useState(null);
     const onSubmit = (data, e) => {
         dispatch(setLoader())
-        e.preventDefault();
+        // e.preventDefault();
         dispatch(actionCreators.userName(data.fullname));
         dispatch(actionCreators.userMobile(data.mobile));
         dispatch(actionCreators.userGender(data.aopt));
@@ -130,7 +130,7 @@ const Details = () => {
                             <p className='alerts'>{errors.fullname?.message}</p>
                         </div>
                         <div className='mobile'>
-                            <input className='input-field2' type="text" placeholder='Mobile Number' name="mobile" {...register("mobile", { required: "mobile number is required", pattern: { value: /^[6789][0-9]{9}$/i, message: "This is not a valid mobile number" } })}></input>
+                            <input className='input-field2' type="text" placeholder='Mobile Number' name="mobile" {...register("mobile", { required: "mobile number is required", pattern: { value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/i, message: "This is not a valid mobile number" } })}></input>
                             <p className='alerts'>{errors.mobile?.message}</p>
                         </div>
                     </div>

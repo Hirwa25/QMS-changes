@@ -55,7 +55,7 @@ const Login = () => {
             </div>
             <div className='middle-portion'>
                 <div className='login-heading'>
-                    <p>Welcome Back <span className='ques'>!</span></p>
+                    <p>Welcome Back to Stella's Store <span className='ques'>!</span></p>
                 </div>
                 <form className='input-login' onSubmit={handleSubmit(onSubmit)}>
                     <div className='radio-button'>
@@ -88,7 +88,7 @@ const Login = () => {
                     </div>
                     <div className='form-container'>
                         <div className='emails'>
-                            <input className='input-field' type="email" placeholder='Enter Email Address' name="email" {...register("email", { required: "Email is required", pattern: { value: /^[a-zA-Z0-9_\-]{4,}[@][a-z]{3,}[\.][a-z]{1,3}$/i, message: "This is not a valid email" } })}></input>
+                            <input className='input-field' type="email" placeholder='Enter Email Address' name="email" {...register("email", { required: "Email is required", pattern: { value: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i, message: "This is not a valid email" } })}></input>
                             <p className='alerts'>{errors.email?.message}</p>
                         </div>
                     </div>
