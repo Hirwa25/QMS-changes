@@ -50,7 +50,7 @@ const Details = () => {
                 !obj.role?navigate("/create-store"):navigate("/")
             }).catch((e)=>{
                 dispatch(UnsetLoader())
-                console.log(e);
+                // console.log(e);
             })
         }else{
             alert("Choose Your Role");
