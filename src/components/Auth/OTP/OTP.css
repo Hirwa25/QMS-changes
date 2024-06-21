@@ -4,14 +4,15 @@
     font-size: 5em;
     font-weight: 900;
     position: relative;
-    left: -12%;
+    left: 12px;
+    /* left: -12%; */
 }
 .otp-heading{
     height: 47vh;
     width: 32vw;
 }
 .otp-heading > p > span{
-    color: #41D3BD;
+    color: #f96ed0;
 }
 .otp-input{
     position: absolute;
@@ -27,7 +28,7 @@
     top: 78%;
     border-radius: 100px;
     border: 1px solid transparent;
-    background-color: #41D3BD;
+    background-color: #f96ed0;
     font-family: 'Source Sans Pro';
     font-weight: 900;
     font-size: 1.6em;
@@ -45,7 +46,7 @@
 }
 .otp-head > u{
     cursor: pointer;
-    color: #41D3BD;
+    color: #f96ed0;
     margin-left: 3%;
 }
 .Enter-otp{

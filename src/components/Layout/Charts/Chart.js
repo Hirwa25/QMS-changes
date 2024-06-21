@@ -1,52 +1,53 @@
 import React, { useState, useEffect } from 'react';
-import { Line, plots } from '@ant-design/plots';
+import { Line } from '@ant-design/plots';
 import Navbar from '../Navbar/Navbar';
 import BarChart from './BarChart';
-import './Charts.css'
-import image from '../../Assets/pic.svg'
+import './Charts.css';
+
 const DemoLine = () => {
     const [data, setData] = useState([]);
-    let date = [];
-    let value = [];
+
     useEffect(() => {
+        const chartData = async () => {
+            try {
+                const response = await fetch('https://d4ad-2405-205-1482-fa00-943c-798-b5a8-1b5a.in.ngrok.io/shop');
+                const json = await response.json();
+                console.log(json);
+
+                const arr = json.split(" ");
+                console.log(arr);
+
+                const regex = /([0-9]{1,4}[-][0-9]{1,}[-][0-9]{1,})|([0-9]{1,}[.][0-9]{1,})/;
+                const filtered = arr.filter((data) => regex.test(data));
+                console.log(filtered);
+
+                const regexDate = /[0-9]{1,4}[-][0-9]{1,}[-][0-9]{1,}/;
+                const dates = [];
+                const values = [];
+
+                filtered.forEach(item => {
+                    if (regexDate.test(item)) {
+                        dates.push(item);
+                    } else {
+                        values.push(parseFloat(item.split(",")[0]));
+                    }
+                });
+
+                if (dates.length > 0 && values.length > 0) {
+                    const chartData = dates.map((date, index) => ({
+                        Date: date,
+                        scales: values[index],
+                    }));
+                    setData(chartData);
+                }
+            } catch (error) {
+                console.log('fetch data failed', error);
+            }
+        };
+
         chartData();
     }, []);
-    const chartData = () => {
-        fetch('https://d4ad-2405-205-1482-fa00-943c-798-b5a8-1b5a.in.ngrok.io/shop')
-            .then((response) => response.json())
-            .then((json) => {
-                setData(json)
-                console.log(json)
-                let arr = json.split(" ");
-                console.log(arr);
-                let regex = /([0-9]{1,4}[-]{1,}[0-9]{1,}[-][0-9]{1,})|([0-9]{1,}[.][0-9]{1,})/
-                let filtered = arr.filter((data) => {
-                    return regex.test(data);
-                })
-                console.log(filtered);
-                let regexdate = /[0-9]{1,4}[-]{1,}[0-9]{1,}[-][0-9]{1,}/
-                if (filtered.length > 0) {
-                    for (let i = 0; i < filtered.length; i++) {
-                        if (regexdate.test(filtered[i])) {
-                            date.push(filtered[i]);
-                        } else {
-                            value.push((filtered[i].split(","))[0]);
-                        }
-                    }
-                }
-                if (date.length > 0 && value.length > 0) {
-                    let arr = [];
-                    for (let i = 0; i < date.length; i++) {
-                        arr.push({ Date: date[i], scales: parseFloat(value[i]) });
-                    }
-                    setData(arr);
-                }
-                console.log(data);
-            })
-            .catch((error) => {
-                console.log('fetch data failed', error);
-            });
-    };
+
     const config = {
         data,
         padding: 'auto',
@@ -58,35 +59,32 @@ const DemoLine = () => {
     };
 
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
     const d = new Date();
-    let day = weekday[d.getDay()];
-    let year = d.getFullYear();
+    const day = weekday[d.getDay()];
+    const year = d.getFullYear();
 
-    return (<>
-        <div>
+    return (
+        <>
             <Navbar />
-        </div>
-        <div className='charts-analytics'>
-            <div className='bar'>
-    <br/>
-
-                <BarChart />
-                <div>
-                    <h3><span>{day} </span>prediction</h3>
+            <div className='charts-analytics'>
+                <div className='bar'>
+                    <br />
+                    <BarChart />
+                    <div>
+                        <h3><span>{day} </span>prediction</h3>
+                    </div>
+                </div>
+                <div className='line'>
+                    <br />
+                    <br />
+                    <Line {...config} />
+                    <div>
+                        <h3><span>{year + 1} </span>prediction</h3>
+                    </div>
                 </div>
             </div>
-            <div className='line'>
-    <br/>
-    <br/>
-
-                <Line {...config} />
-                <div>
-                <h3><span>{year + 1} </span>prediction</h3>
-                </div>
-            </div>
-        </div>
-    </>);
+        </>
+    );
 };
 
-export default DemoLine
+export default DemoLine;

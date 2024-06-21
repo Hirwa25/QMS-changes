@@ -33,7 +33,7 @@
 .photo1-role,.photo2-role{
     width: 10vw;
     height: 5vh;
-    background: #41D3BD;
+    background: #ff00b3;
     box-shadow: 0px 2.73786px 15px #C4C4C4;
     border-radius: 68.4466px;
     font-family: 'Source Sans Pro';
@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 .photo2-role {
-    background: #304D6D;
+    background: #ff00b3;
     position: absolute;
     top: 87%;
 }
@@ -92,7 +92,7 @@
     width: 17vw;
     height: 6vh;
     cursor: pointer;
-    background: #304D6D;
+    background: #ff00b3;
     border-radius: 68.4466px;
     font-family: 'Source Sans Pro';
     font-weight: 400;
@@ -130,7 +130,7 @@
     padding: 3%;
     padding-left: 3%;
     width: 32vw;
-    border: 3px solid black;
+    border: 3px solid #ff00b3;
     border-radius: 10px;
     position: relative;
     padding-right: 4%;
@@ -159,7 +159,7 @@
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
-    color: #2b4057f3;
+    color: #ff00b3;
     font-size: 1.4em;
 }
 .submit-btn {
@@ -170,10 +170,11 @@
     top: 68%;
     border-radius: 100px;
     border: 1px solid transparent;
-    background-color: #41D3BD;
+    background-color: #ff00b3;
     font-family: 'Source Sans Pro';
     font-weight: 900;
     font-size: 1.6em;
     cursor: pointer;
     box-shadow: 0px 0px 15px rgb(108 187 134 / 49%);
+    color: white;
 }

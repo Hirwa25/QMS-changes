@@ -82,7 +82,7 @@ function getLocation() {
     <>
         <Navbar/>
         <SearchBar/>
-        <h1 className={styles.mainHead}>Nearby Stores</h1>
+        <h1 className={styles.mainHead}>Nearby clinics</h1>
         <div className={styles.cards}>
             {nearby.length===0?<button onClick={getLocation}>Show Nearby</button>:""}
             {nearby.length!==0?nearby.map(n=>{

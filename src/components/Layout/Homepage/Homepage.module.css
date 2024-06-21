@@ -1,17 +1,21 @@
-.topSearch{
+topSearch {
     display: flex;
     width: 95%;
     margin-left: 2.5%;
     margin-top: 10px;
 }
-.mainHead{
+
+.mainHead {
     margin-left: 2.5%;
     font-size: 44px;
 }
-.one{
+
+.one {
     flex: 2;
 }
-.two,.three{
+
+.two,
+.three {
     flex: 1;
     /* font-size: 18px;
     margin-right: 10px;
@@ -21,7 +25,8 @@
     border: none;
     background: rgba(48, 77, 109, 0.1); */
 }
-.topSearch input{
+
+.topSearch input {
     width: 95%;
     font-size: 18px;
     margin-right: 10px;
@@ -31,13 +36,13 @@
     padding-left: 35px;
     border: none;
     background: rgba(48, 77, 109, 0.1);
-    
 }
-::placeholder{
+
+::placeholder {
     color: #192839;
 }
 
-.iconInput{
+.iconInput {
     background: #d9dfe4;
     border-radius: 50%;
     width: 30px;
@@ -47,13 +52,15 @@
     top: -30px;
     color: #192839;
 }
-.iconInput svg{
+
+.iconInput svg {
     display: block;
     position: relative;
     top: 3px;
     left: 3px;
 }
-.card{
+
+.card {
     background: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -63,20 +70,24 @@
     color: #192839;
     margin: 16px 16px;
 }
-.head{
+
+.head {
     font-size: 28px;
     text-align: center;
 }
-.icons{
+
+.icons {
     width: 36px;
     height: 36px;
     margin-left: 10px;
 }
-.roundNo{
+
+.roundNo {
     margin-left: 5px;
     font-size: 12px;
     display: inline-block;
-    background-color: #F9DB6D;
+    background-color: #f96ed0;
+    color: white;
     width: 24px;
     height: 24px;
     padding: 4px;
@@ -86,25 +97,28 @@
     position: relative;
     top: -10px;
 }
-.yellowCapsule{
-    background: #F9DB6D;
+
+.yellowCapsule {
+    background: #f96ed0;
     border-radius: 22px;
     width: 75%;
     text-align: center;
     margin-left: 12.5%;
     margin-top: 2px;
 }
-.yellowCapsule2{
-    background: #F9DB6D;
+
+.yellowCapsule2 {
+    background: #f96ed0;
     border-radius: 22px;
     width: 30%;
     margin-top: 2px;
     font-size: 16px;
     padding: 4px 12px;
 }
-.enterButton{
-    background: #41D3BD;
-    box-shadow: 0px 4px 15px #41D3BD;
+
+.enterButton {
+    background: #ff00b3;
+    box-shadow: 0px 4px 15px #ff00b3;
     border-radius: 15px;
     border: none;
     padding: 4px 12px;
@@ -115,9 +129,10 @@
     font-weight: 600;
     cursor: pointer;
 }
-.leaveButton{
-    background: #FF8898;
-    box-shadow: 0px 4px 15px #FF8898;
+
+.leaveButton {
+    background: #f96ed0;
+    box-shadow: 0px 4px 15px #f96ed0;
     border-radius: 15px;
     border: none;
     padding: 4px 12px;
@@ -128,13 +143,15 @@
     font-weight: 600;
     cursor: pointer;
 }
-.cards{
+
+.cards {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.listElement{
+
+.listElement {
     width: 95%;
     margin-left: 2.5%;
     background: rgba(255, 255, 255, 0.1);
@@ -145,16 +162,17 @@
     padding-right: 0;
     margin-bottom: 20px;
 }
-.leaveBtn{
-    float:right; 
-    padding:4px 12px;
-    font-size:24px; 
-    position:relative;
-    top:-3.5px; 
-    background: #FF8898;
-    box-shadow: 0px 4px 15px #FF8898;
+
+.leaveBtn {
+    float: right;
+    padding: 4px 12px;
+    font-size: 24px;
+    position: relative;
+    top: -3.5px;
+    background: #f96ed0;
+    box-shadow: 0px 4px 15px #f96ed0;
     border-radius: 15px;
-    border-color: #FF8898;
+    border-color: #f96ed0;
     border-style: solid;
     cursor: pointer;
 }

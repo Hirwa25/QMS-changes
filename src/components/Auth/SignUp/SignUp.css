@@ -14,18 +14,18 @@
 }
 .Main-heading > p{
     font-family: 'Source Sans Pro';
-    color: #192839;
+    color: #f304af;
     font-size: 5em;
     font-weight: 900;
     position: relative;
-    left: -9%;
+    left: -4%;
 }
 .Main-heading{
     height: 47vh;
     width: 34vw;
 }
 .Main-heading > p > span{
-    color: #41D3BD;
+    color: #f304af;
 }
 .input-login{
     height: 47vh;

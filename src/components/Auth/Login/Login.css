@@ -1,33 +1,50 @@
+/* Existing styles... */
+
 .login-heading {
     height: 47vh;
     width: 34vw;
     position: relative;
     display: flex;
     align-items: center;
-    left: -3%;
+    flex-direction: column; /* Ensure column direction for logo and text */
+    /* left: -3%; */
 }
-.login-heading > p{
+
+.login-logo {
+    max-width: 250px; /* Adjust the width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 1px; /* Center the logo and add some bottom margin */
+}
+
+.login-heading > p {
+    margin-top: 40px;
     font-family: 'Source Sans Pro';
-    color: #192839;
+    color: #ff00b3; /* Orange heading text */
     font-size: 5em;
-    font-weight: 900; 
+    font-weight: 300; 
 }
-.login-heading > p > span{
-    color: #41D3BD;
+
+.login-heading > p > span {
+    margin-left: 40px;
+    color: #ff00b3; /* Orange exclamation mark */
 }
-.signup-head{
+
+.signup-head {
     position: absolute;
     top: 108%;
     left: 31.5%;
     font-family: 'Source Sans Pro';
     font-size: 1.3em;
 }
-.signup-head > span{
+
+.signup-head > span {
     cursor: pointer;
-    color: #41D3BD;
+    color: #ff00b3; /* Orange signup link */
     text-decoration: underline;
 }
-.radio-button{
+
+.radio-button {
     display: flex;
     justify-content: space-between;
     width: 20vw;
@@ -35,36 +52,89 @@
     top: 18%;
     left: 29%;
 }
-#field-store,#field-customer{
+
+#field-store, #field-customer {
     position: relative;
     left: -5%;
     cursor: pointer;
 }
-.label-data{
+
+.label-data {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
-    color: #2b4057f3;
+    color: #ff00b3; /* Orange radio button labels */
     font-size: 1.4em;
 }
+
 .emails, .passwords {
     position: absolute;
     top: 30%;
     left: 28%;
 }
+
 .passwords {
     top: 54%;
 }
-.forgot{
+
+.forgot {
     position: absolute;
     top: 78%;
     left: 29%;
 }
-.forgot > u{
+
+.forgot > u {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
     cursor: pointer;
-    color: #41D3BD;
+    color: #ff00b3; /* Orange forgot password link */
     font-size: 1.3em;
 }
+
+.Signup-Page {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text for contrast */
+}
+
+.middle-portion {
+    text-align: center;
+}
+
+.input-login {
+    max-width: 400px;
+    margin: auto;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff00b3; /* Orange border */
+    border-radius: 5px;
+}
+
+.alerts {
+    color: rgb(255, 0, 132); /* Red for error messages */
+}
+
+.signup-btn {
+    background-color: #ff00b3; /* Orange button */
+    color: white; /* White text on button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #ff00b3; /* Slightly darker orange on hover */
+}
+
+.queue-img{
+    max-width: 40%;
+    height: auto;
+}
+
+/* Removed the empty .Navbar-Signup ruleset */
+
+
